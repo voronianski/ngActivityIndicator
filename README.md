@@ -2,7 +2,7 @@
 
 Simple application preloader animation service for [Angular.js](http://angularjs.org/) applications.
 
-ngDialog is small (~2Kb), customizable through themes and has only Angular.js as dependency.
+ngActivityIndicator is small, customizable through themes and has only Angular.js as dependency.
 
 ## Install
 
