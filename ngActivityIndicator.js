@@ -22,6 +22,8 @@
 					startAnimating: function () {
 						$timeout.cancel(timer);
 						$rootScope.loading = true;
+
+						return publicMethods;
 					},
 
 					stopAnimating: function (delay) {
@@ -35,6 +37,8 @@
 							$timeout.cancel(timer);
 							$rootScope.loading = false;
 						}
+
+						return publicMethods;
 					},
 
 					isAnimating: function () {

@@ -2,7 +2,7 @@
 
 Simple application preloader animation service for [Angular.js](http://angularjs.org/) applications.
 
-ngActivityIndicator is small, customizable through themes and has only Angular.js as dependency.
+ngActivityIndicator is small, customizable through [themes](https://github.com/voronianski/ngActivityIndicator#built-in-styles) and has only Angular.js as dependency.
 
 ## Install
 
@@ -33,13 +33,33 @@ API is highly inspired by Objective-C [UIActivityIndicatorView](https://develope
 
 ##### ``startAnimating()``
 
-##### ``stopAnimating()``
+Start preload animation.
+
+##### ``stopAnimating(delay)``
+
+Stop animating preloader.
 
 ##### ``isAnimating()``
 
+Check whether activity indicator is animating or not.
+
 ##### ``setActivityIndicatorStyle()``
 
-## Built-in themes
+There are several styles built-in:
+
+- ``SimpleLightGrey``
+- ``AnotherStyle``
+
+Style by default is ``SimpleLightGray``, you can change it by setting the value string on ``$activityIndicatorProvider``, example:
+
+```javascript
+angular.module('yourModule', ['ngActivityIndicator'])
+	.config(['$activityIndicatorProvider', function ($activityIndicatorProvider) {
+		$activityIndicatorProvider.setActivityIndicatorStyle('CircleClockDark');
+	}]);
+```
+
+## Built-in styles
 
 You're able to choose what indicator suites you most within default ones or create your own simply with css.
 
