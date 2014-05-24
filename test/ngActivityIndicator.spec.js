@@ -16,7 +16,7 @@ describe('ngActivityIndicator module', function () {
 		});
 
 		it('should add loading property "true" to $rootScope', function () {
-			expect(rootScope.loading).toBe(true);
+			expect(rootScope.AILoading).toBe(true);
 		});
 
 		it('should set service status as isAnimating', function () {
@@ -29,7 +29,7 @@ describe('ngActivityIndicator module', function () {
 			});
 
 			it('should change loading property "false" to $rootScope', function () {
-				expect(rootScope.loading).toBe(false);
+				expect(rootScope.AILoading).toBe(false);
 			});
 
 			it('should set service status as not isAnimating', function () {

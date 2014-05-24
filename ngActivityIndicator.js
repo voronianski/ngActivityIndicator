@@ -7,9 +7,11 @@
 (function (window, angular, undefined) {
 	'use strict';
 
-	angular.module('ngActivityIndicator', []).provider('$activityIndicator', function () {
-		var activityIndicatorStyle = 'SimpleLightGray';
+	var activityIndicatorStyle = 'SimpleLightGray';
 
+	angular.module('ngActivityIndicator', [])
+
+	.provider('$activityIndicator', function () {
 		this.setActivityIndicatorStyle = function (_activityIndicatorStyle) {
 			activityIndicatorStyle = _activityIndicatorStyle || activityIndicatorStyle;
 		};
@@ -21,7 +23,7 @@
 				var publicMethods = {
 					startAnimating: function () {
 						$timeout.cancel(timer);
-						$rootScope.loading = true;
+						$rootScope.AILoading = true;
 
 						return publicMethods;
 					},
@@ -35,19 +37,23 @@
 
 						function ready () {
 							$timeout.cancel(timer);
-							$rootScope.loading = false;
+							$rootScope.AILoading = false;
 						}
 
 						return publicMethods;
 					},
 
 					isAnimating: function () {
-						return $rootScope.loading || false;
+						return $rootScope.AILoading || false;
 					}
 				};
 
 				return publicMethods;
 			}];
+	})
+
+	.directive('activity-indicator', function () {
+
 	});
 
 })(window, window.angular);
