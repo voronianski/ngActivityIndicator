@@ -1,0 +1,28 @@
+/* Two-way spinner */
+.two-spin {
+	height: 32px;
+	width: 32px;
+	margin: 80px auto;
+	position: relative;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ddd #ddd #f3f3f6 #f3f3f6;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	-webkit-animation: clockwise .6s linear infinite;
+	-moz-animation: clockwise .6s linear infinite;
+	-ms-animation: clockwise .6s linear infinite;
+	animation: clockwise .6s linear infinite;
+}
+
+@-webkit-keyframes clockwise {
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+
+@-moz-keyframes clockwise {
+	to { -moz-transform: rotate(360deg) translateZ(0); }
+}
+
+@keyframes clockwise {
+	to { transform: rotate(360deg) translateZ(0); }
+}

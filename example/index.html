@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="exampleApp">
+<head>
+	<meta charset="utf-8">
+	<title>ngActivityIndicator</title>
+</head>
+<body ng-controller="MainCtrl">
+	<div class="box">
+		<div ng-activity-indicator=""></div>
+	</div>
+
+	<div class="box">
+		<div ng-activity-indicator=""></div>
+	</div>
+
+	<div class="box">
+		<div ng-activity-indicator=""></div>
+	</div>
+
+	<div class="controls">
+		<a href="" ng-click="start()">Start</a>
+		<a href="" ng-click="stop()">Start</a>
+	</div>
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../ngActivityIndicator.js"></script>
+	<script>
+	var app = angular.module('exampleApp', ['ngActivityIndicator']);
+	app.controller('MainCtrl', ['$activityIndicator', '$scope',
+		function ($activityIndicator, $scope) {
+			$activityIndicator.startAnimating();
+
+			$scope.start = function () {
+				$activityIndicator.startAnimating();
+			};
+
+			$scope.stop = function () {
+				$activityIndicator.stopAnimating();
+			};
+		}
+	]);
+	</script>
+</body>
+</html>
