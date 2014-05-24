@@ -1,0 +1,34 @@
+{
+  "name": "ngActivityIndicator",
+  "version": "0.1.0",
+  "description": "Simple Angular.js preloaders provider",
+  "main": "ngActivityIndicator.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voronianski/ngActivityIndicator.git"
+  },
+  "keywords": [
+    "ngActivityIndicator",
+    "angular.js",
+    "preloader",
+    "loader",
+    "animating"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voronianski/ngActivityIndicator/issues"
+  },
+  "homepage": "https://github.com/voronianski/ngActivityIndicator",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
