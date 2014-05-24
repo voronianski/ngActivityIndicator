@@ -27,7 +27,7 @@ app.controller('MainCtrl', function ($scope, $actvityIndicator) {
 });
 ```
 
-You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#Directive) to show animation or you are able to create your own preloader in html, style with CSS and simply show/hide it:
+You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#directive) to show animation or you are able to create your own preloader in html, style with CSS and simply show/hide it:
 
 ```html
 <body>
@@ -54,7 +54,7 @@ Check whether activity indicator is animating or not.
 
 ##### ``setActivityIndicatorStyle()``
 
-There are several [styles built-in](https://github.com/voronianski/ngActivityIndicator#list-of-style-names)). Style by default is ``SimpleLightGray``, you can change it by setting the value string on ``$activityIndicatorProvider``, example:
+There are several [styles built-in](https://github.com/voronianski/ngActivityIndicator#list-of-style-names). Style by default is ``SimpleLightGray``, you can change it by setting the value string on ``$activityIndicatorProvider``, example:
 
 ```javascript
 angular.module('yourModule', ['ngActivityIndicator'])
