@@ -1,28 +1,196 @@
+.ai-indicator,
+.ai-indicator *,
+.ai-indicator *:before,
+.ai-indicator *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 /* Two-way spinner */
-.two-spin {
+.ai-circled {
 	height: 32px;
 	width: 32px;
-	margin: 80px auto;
 	position: relative;
 	border-width: 5px;
 	border-style: solid;
-	border-color: #ddd #ddd #f3f3f6 #f3f3f6;
 	-webkit-border-radius: 100%;
 	border-radius: 100%;
-	-webkit-animation: clockwise .6s linear infinite;
-	-moz-animation: clockwise .6s linear infinite;
-	-ms-animation: clockwise .6s linear infinite;
-	animation: clockwise .6s linear infinite;
+	-webkit-animation: ai-clockwise .6s linear infinite;
+	-moz-animation: ai-clockwise .6s linear infinite;
+	-ms-animation: ai-clockwise .6s linear infinite;
+	animation: ai-clockwise .6s linear infinite;
 }
 
-@-webkit-keyframes clockwise {
+@-webkit-keyframes ai-clockwise {
 	to { -webkit-transform: rotate(360deg) translateZ(0); }
 }
 
-@-moz-keyframes clockwise {
-	to { -moz-transform: rotate(360deg) translateZ(0); }
+@keyframes ai-clockwise {
+	to { transform: rotate(360deg) translateZ(0); }
 }
 
-@keyframes clockwise {
-	to { transform: rotate(360deg) translateZ(0); }
+/* Dotted */
+.ai-dotted {
+	width: 36px;
+}
+
+.ai-dotted .ai-inner1, .ai-dotted .ai-inner2, .ai-dotted .ai-inner3 {
+	display: inline-block;
+	margin: 0.125em;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 100%;
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	-webkit-animation: ai-rotate .75s infinite linear;
+	animation: rotate .75s infinite linear;
+}
+
+.ai-dotted .ai-inner2 {
+	-webkit-animation-delay: 0.1875s;
+}
+
+.ai-dotted .ai-inner3 {
+	-webkit-animation-delay: 0.375s;
+}
+
+@-webkit-keyframes ai-rotate {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+
+	30% {
+		-webkit-transform: translateY(-0.25em);
+	}
+
+	50% {
+		-webkit-transform: translateY(0%);
+	}
+
+	70% {
+		-webkit-transform: translateY(0.25em);
+	}
+}
+
+@keyframes ai-rotate {
+	0% {
+		transform: translateY(0%);
+	}
+
+	30% {
+		transform: translateY(-0.25em);
+	}
+
+	50% {
+		transform: translateY(0%);
+	}
+
+	70% {
+		transform: translateY(0.25em);
+	}
+}
+
+/* Spinner */
+.ai-spinner {
+	position cabsolute;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: ai-rotateThis 1s infinite linear;
+	animation: ai-rotateThis 1s infinite linear;
+	-webkit-transform:scale(0.3);
+	transform:scale(0.3);
+}
+
+.ai-spinner > * {
+	width: 10px;
+	height: 30px;
+	position: absolute;
+	top: 35px;
+	left: 45px;
+	border-radius: 50px;
+}
+
+@-webkit-keyframes ai-rotateThis {
+	from { -webkit-transform:scale(0.3) rotate(0deg); }
+	to	 { -webkit-transform:scale(0.3) rotate(360deg); }
+}
+
+@keyframes ai-rotateThis {
+	from { transform:scale(0.3) rotate(0deg); }
+	to	 { transform:scale(0.3) rotate(360deg); }
+}
+
+.ai-bar1 {
+	-webkit-transform: rotate(0deg) translate(0, -40px);
+	transform: rotate(0deg) translate(0, -40px);
+	opacity:0.1;
+}
+
+.ai-bar2 {
+	-webkit-transform: rotate(36deg) translate(0, -40px);
+	transform: rotate(36deg) translate(0, -40px);
+	opacity:0.2;
+}
+
+.ai-bar3 {
+	-webkit-transform: rotate(72deg) translate(0, -40px);
+	transform: rotate(72deg) translate(0, -40px);
+	opacity:0.3;
+}
+
+.ai-bar4 {
+	-webkit-transform: rotate(108deg) translate(0, -40px);
+	transform: rotate(108deg) translate(0, -40px);
+	opacity:0.4;
+}
+
+.ai-bar5 {
+	-webkit-transform: rotate(144deg) translate(0, -40px);
+	transform: rotate(144deg) translate(0, -40px);
+	opacity:0.5;
+}
+
+.ai-bar6 {
+	-webkit-transform: rotate(180deg) translate(0, -40px);
+	transform: rotate(180deg) translate(0, -40px);
+	opacity:0.6;
+}
+
+.ai-bar7 {
+	-webkit-transform: rotate(216deg) translate(0, -40px);
+	transform: rotate(216deg) translate(0, -40px);
+	opacity:0.7;
+}
+
+.ai-bar8 {
+	-webkit-transform: rotate(252deg) translate(0, -40px);
+	transform: rotate(252deg) translate(0, -40px);
+	opacity:0.8;
+}
+
+.ai-bar9 {
+	-webkit-transform: rotate(288deg) translate(0, -40px);
+	transform: rotate(288deg) translate(0, -40px);
+	opacity:0.9;
+}
+
+.ai-bar10 {
+	-webkit-transform: rotate(324deg) translate(0, -40px);
+	transform: rotate(324deg) translate(0, -40px);
+	opacity:1;
+}
+
+/* Colors */
+.ai-white-spin {
+	border-color: rgba(255,255,255,.5) rgba(255,255,255, .5) #fff #fff;
+}
+
+.ai-white {
+	border-color: #fff;
+	background-color: #fff;
+}
+
+.ai-white-parent > * {
+	background: #fff;
 }

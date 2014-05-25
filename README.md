@@ -4,6 +4,10 @@ Simple application preloader animation provider for [Angular.js](http://angularj
 
 ngActivityIndicator is small, all-in-one solution, customizable through [themes](https://github.com/voronianski/ngActivityIndicator#built-in-styles) and dependant only on Angular.js.
 
+![](https://dl.dropboxusercontent.com/u/100463011/ngActivityIndicator.gif)
+
+### [Demo]()
+
 ## Install
 
 You can download all necessary ngActivityIndicator files manually or install it with bower:
@@ -111,7 +115,7 @@ You're able to choose what indicator suites you most within default ones or crea
 
 Want to add your styles into this module? Cool, just fork this repo and make pull-request!
 
----
+## License
 
 ```
 WWWWWW||WWWWWW

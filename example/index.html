@@ -3,23 +3,163 @@
 <head>
 	<meta charset="utf-8">
 	<title>ngActivityIndicator</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/ngActivityIndicator.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			outline: 0;
+			box-sizing: border-box;
+		}
+
+		::selection {
+			background-color: #aa4f80;
+			color: #fff;
+		}
+
+		::-moz-selection {
+			background-color: #aa4f80;
+			color: #fff;
+		}
+
+		::selection {
+			background-color: #e74c3c;
+			color: #fff;
+		}
+
+		::-moz-selection {
+			background-color: #e74c3c;
+			color: #fff;
+		}
+
+		.clearfix {
+			display: block;
+		}
+
+		.clearfix:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		body {
+			background: #f54;
+			color: #fff;
+			font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+			overflow: hidden;
+		}
+
+		a {
+			color: #fff;
+			border-bottom: 2px solid;
+			text-decoration: none;
+		}
+
+		h1 {
+			color: #fff;
+			font-size: 3em;
+			font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+			font-weight: 700;
+			text-align: center;
+			padding-top: 120px;
+		}
+
+		.info {
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.main {
+			max-width: 600px;
+			margin: 30px auto;
+		}
+
+		.box {
+			display: inline-block;
+			vertical-align: top;
+			float: left;
+			width: 200px;
+			height: 200px;
+		}
+
+		.box .name {
+			color: #fff;
+			font-size: 20px;
+			margin-top: 80px;
+			text-align: center;
+		}
+
+		.box .name:before {
+			content: '“';
+		}
+
+		.box .name:after {
+			content: '”';
+		}
+
+		.box .ai-circled {
+			margin: 75px auto;
+		}
+
+		.box .ai-dotted {
+			margin: 85px auto 0;
+		}
+
+		.box .ai-spinner {
+			margin: 46px auto 0;
+		}
+
+		.btn {
+			display: inline-block;
+			color: #fff;
+			font-size: 14px;
+			font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+			width: 120px;
+			height: 50px;
+			border: 2px solid #fff;
+			text-align: center;
+			line-height: 46px;
+			text-decoration: none;
+			-webkit-border-radius: 2px;
+			border-radius: 2px;
+			margin: 0 10px;
+		}
+
+		.controls {
+			clear: both;
+			text-align: center;
+		}
+	</style>
 </head>
 <body ng-controller="MainCtrl">
-	<div class="box">
-		<div ng-activity-indicator=""></div>
+	<h1>ngActivityIndicator</h1>
+	<div class="info">
+		Preloaders provider for <a href="https://angularjs.org/" target="_blank">Angular.js</a> applications with built-in styles. <a href="https://github.com/voronianski/ngActivityIndicator#ngactivityindicator" target="_blank">Documentation.</a>
 	</div>
 
-	<div class="box">
-		<div ng-activity-indicator=""></div>
-	</div>
+	<div class="main clearfix">
+		<div class="box">
+			<div ng-activity-indicator="CircledWhite"></div>
+			<div ng-show="!AILoading" class="name">CircledWhite</div>
+		</div>
 
-	<div class="box">
-		<div ng-activity-indicator=""></div>
+		<div class="box">
+			<div ng-activity-indicator="DottedWhite"></div>
+			<div ng-show="!AILoading" class="name">DottedWhite</div>
+		</div>
+
+		<div class="box">
+			<div ng-activity-indicator="SpinnerWhite"></div>
+			<div ng-show="!AILoading" class="name">SpinnerWhite</div>
+		</div>
 	</div>
 
 	<div class="controls">
-		<a href="" ng-click="start()">Start</a>
-		<a href="" ng-click="stop()">Start</a>
+		<a href="" class="btn" ng-click="start()">Start</a>
+		<a href="" class="btn" ng-click="stop()">Stop</a>
 	</div>
 
 	<script src="../bower_components/angular/angular.js"></script>

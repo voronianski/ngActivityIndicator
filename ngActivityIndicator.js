@@ -7,7 +7,23 @@
 (function (window, angular, undefined) {
 	'use strict';
 
-	var activityIndicatorStyle = 'SimpleLightGray';
+	var activityIndicatorStyle = 'TwoSpinGrey';
+	var templates = {
+
+		CircledWhite: '\
+			<div ng-show="AILoading" class="ai-circled ai-white-spin ai-indicator"></div>',
+
+		DottedWhite: '\
+			<div ng-show="AILoading" class="ai-dotted ai-white-parent ai-indicator">\
+				<span class="ai-inner1"></span><span class="ai-inner2"></span><span class="ai-inner3"></span>\
+			</div>',
+
+		SpinnerWhite: '\
+			<div ng-show="AILoading" class="ai-spinner ai-white-parent ai-indicator">\
+				<div class="ai-bar1"></div><div class="ai-bar2"></div><div class="ai-bar3"></div><div class="ai-bar4"></div><div class="ai-bar5"></div><div class="ai-bar6"></div>\
+				<div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar9"></div><div class="ai-bar10"></div>\
+			</div>'
+	};
 
 	angular.module('ngActivityIndicator', [])
 
@@ -52,8 +68,20 @@
 			}];
 	})
 
-	.directive('activity-indicator', function () {
+	.directive('ngActivityIndicator', function () {
+		return {
+			restrict: 'AE',
+			compile: function (elem, attrs) {
+				var style = attrs.ngActivityIndicator || activityIndicatorStyle;
+				var template = templates[style];
 
+				elem.append(template);
+
+				// if elem is body
+				// find ng-view + add ng-hide="AILoading"
+				//debugger;
+			}
+		};
 	});
 
 })(window, window.angular);
