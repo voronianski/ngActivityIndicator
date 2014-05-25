@@ -7,7 +7,7 @@
 (function (window, angular, undefined) {
 	'use strict';
 
-	var activityIndicatorStyle = 'TwoSpinGrey';
+	var activityIndicatorStyle = 'CircledGrey';
 	var templates = {
 
 		CircledWhite: '\

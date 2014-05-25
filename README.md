@@ -23,12 +23,12 @@ You need to include ``ngActivityIndicator.js`` and  ``ngActivityIndicator.css`` 
 ```javascript
 var app = angular.module('exampleApp', ['ngActivityIndicator']);
 
-app.controller('MainCtrl', function ($scope, $actvityIndicator) {
+app.controller('MainCtrl', ['$activityIndicator', function ($actvityIndicator) {
 	$actvityIndicator.startAnimating();
 	setTimeout(function () {
 		$actvityIndicator.stopAnimating();
 	}, 3000);
-});
+}]);
 ```
 
 You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#directive) to show animation or you are able to create your own preloader in html, style with CSS and simply show/hide it:
@@ -108,7 +108,7 @@ You're able to choose what indicator suites you most within default ones or crea
 
 ##### List of style names:
 
-- CircledWhite / CircledGrey / CircledDark
+- CircledWhite / CircledGrey *(by default)* / CircledDark
 - DottedWhite / DottedGrey / DottedDark
 - SpinnerWhite / SpinnerGrey / SpinnerDark
 
