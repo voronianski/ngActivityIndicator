@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="exampleApp">
+<head>
+	<meta charset="utf-8">
+	<title>ngActivityIndicator with ngView</title>
+	<link rel="stylesheet" href="../css/ngActivityIndicator.css">
+</head>
+<body ng-activity-indicator>
+
+	<div ng-view></div>
+
+	<script type="text/ng-template" id="mainView">
+		<div>{{title}}</div>
+	</script>
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-route/angular-route.js"></script>
+	<script src="../ngActivityIndicator.js"></script>
+	<script>
+	var app = angular.module('exampleApp', ['ngRoute', 'ngActivityIndicator']);
+
+	app.config(['$routeProvider', function ($routeProvider) {
+		$routeProvider.when('/', { templateUrl: 'mainView', controller: 'MainCtrl' });
+	}]);
+
+	app.controller('MainCtrl', ['$scope', '$activityIndicator', '$timeout', function ($scope, $activityIndicator, $timeout) {
+		$scope.title = 'ngView content';
+
+		$activityIndicator.startAnimating();
+		$timeout(function () {
+			$activityIndicator.stopAnimating();
+		}, 3000)
+	}]);
+	</script>
+
+</body>
+</html>

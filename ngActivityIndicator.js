@@ -1,5 +1,5 @@
 /*
- * ngActivityIndicator - simple preloaders for Angular
+ * ngActivityIndicator - simple preloaders for Angular.js apps
  * http://github.com/voronianski/ngActivityIndicator
  * (c) 2014 MIT License, http://pixelhunter.me
  */
@@ -87,13 +87,13 @@
 			compile: function (elem, attrs) {
 				var styleName = attrs.ngActivityIndicator || activityIndicatorStyle;
 				var tmpl = templater(styleName);
-				//var parts = styleName.match(/([A-Z]?[^A-Z]*)/g).slice(0,-1);
+
+				if (elem[0].nodeName === 'BODY') {
+					var ngView = angular.element(document.querySelectorAll('[ng-view]'));
+					ngView.attr('ng-hide', 'AILoading');
+				}
 
 				elem.append(tmpl);
-
-				// if elem is body
-				// find ng-view + add ng-hide="AILoading"
-				//debugger;
 			}
 		};
 	});
