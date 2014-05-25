@@ -8,21 +8,34 @@
 	'use strict';
 
 	var activityIndicatorStyle = 'CircledGrey';
+
 	var templates = {
-
-		CircledWhite: '\
-			<div ng-show="AILoading" class="ai-circled ai-white-spin ai-indicator"></div>',
-
-		DottedWhite: '\
-			<div ng-show="AILoading" class="ai-dotted ai-white-parent ai-indicator">\
+		Circled: '\
+			<div ng-show="AILoading" class="ai-circled ai-indicator"></div>',
+		Dotted: '\
+			<div ng-show="AILoading" class="ai-dotted ai-indicator">\
 				<span class="ai-inner1"></span><span class="ai-inner2"></span><span class="ai-inner3"></span>\
 			</div>',
-
-		SpinnerWhite: '\
-			<div ng-show="AILoading" class="ai-spinner ai-white-parent ai-indicator">\
+		Spinner: '\
+			<div ng-show="AILoading" class="ai-spinner ai-indicator">\
 				<div class="ai-bar1"></div><div class="ai-bar2"></div><div class="ai-bar3"></div><div class="ai-bar4"></div><div class="ai-bar5"></div><div class="ai-bar6"></div>\
 				<div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar9"></div><div class="ai-bar10"></div>\
 			</div>'
+	};
+
+	var templater = function (styleName) {
+		var parts = styleName.match(/([A-Z]?[^A-Z]*)/g).slice(0,-1);
+		var template = parts[0];
+		var color = parts[1].toLowerCase();
+
+		var $template = angular.element(templates[template]);
+		if (template === 'Circled') {
+			$template.addClass('ai-' + color + '-spin');
+		} else {
+			$template.addClass('ai-' + color + '-parent');
+		}
+
+		return $template;
 	};
 
 	angular.module('ngActivityIndicator', [])
@@ -72,10 +85,11 @@
 		return {
 			restrict: 'AE',
 			compile: function (elem, attrs) {
-				var style = attrs.ngActivityIndicator || activityIndicatorStyle;
-				var template = templates[style];
+				var styleName = attrs.ngActivityIndicator || activityIndicatorStyle;
+				var tmpl = templater(styleName);
+				//var parts = styleName.match(/([A-Z]?[^A-Z]*)/g).slice(0,-1);
 
-				elem.append(template);
+				elem.append(tmpl);
 
 				// if elem is body
 				// find ng-view + add ng-hide="AILoading"

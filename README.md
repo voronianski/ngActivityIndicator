@@ -60,12 +60,12 @@ Check whether activity indicator is animating or not.
 
 ##### ``setActivityIndicatorStyle()``
 
-There are several [styles built-in](https://github.com/voronianski/ngActivityIndicator#list-of-style-names). Style by default is ``SimpleLightGray``, you can change it by setting the value string on ``$activityIndicatorProvider``, example:
+There are several [styles built-in](https://github.com/voronianski/ngActivityIndicator#list-of-style-names). Style by default is ``CircledGrey``, you can change it by setting the value string on ``$activityIndicatorProvider``, example:
 
 ```javascript
 angular.module('yourModule', ['ngActivityIndicator'])
 	.config(['$activityIndicatorProvider', function ($activityIndicatorProvider) {
-		$activityIndicatorProvider.setActivityIndicatorStyle('CircleDark');
+		$activityIndicatorProvider.setActivityIndicatorStyle('SpinnerDark');
 	}]);
 ```
 
@@ -99,7 +99,7 @@ If you prefer to manage what to show on preloading mode by yourself, just use it
 You can also override preloader style by adding it's name as directive value:
 
 ```html
-<div ng-activity-indicator="CircleDark"></div>
+<div ng-activity-indicator="CircledDark"></div>
 ```
 
 ## Built-in styles
@@ -108,7 +108,7 @@ You're able to choose what indicator suites you most within default ones or crea
 
 ##### List of style names:
 
-- CircledWhite / CircledGrey *(by default)* / CircledDark
+- CircledWhite / CircledGrey *(default)* / CircledDark
 - DottedWhite / DottedGrey / DottedDark
 - SpinnerWhite / SpinnerGrey / SpinnerDark
 
