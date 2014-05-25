@@ -4,9 +4,9 @@ Simple application preloader animation provider for [Angular.js](http://angularj
 
 ngActivityIndicator is small, all-in-one solution, customizable through [themes](https://github.com/voronianski/ngActivityIndicator#built-in-styles) and dependant only on Angular.js.
 
-## [Demo]()
+### [Demo](http://labs.voronianski.com/ngActivityIndicator.js)
 
-[![](https://dl.dropboxusercontent.com/u/100463011/ngActivityIndicator-small.gif)]()
+[![](https://dl.dropboxusercontent.com/u/100463011/ngActivityIndicator-small.gif)](http://labs.voronianski.com/ngActivityIndicator.js)
 
 ## Install
 
