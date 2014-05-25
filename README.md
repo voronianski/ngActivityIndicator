@@ -4,9 +4,9 @@ Simple application preloader animation provider for [Angular.js](http://angularj
 
 ngActivityIndicator is small, all-in-one solution, customizable through [themes](https://github.com/voronianski/ngActivityIndicator#built-in-styles) and dependant only on Angular.js.
 
-[![](https://dl.dropboxusercontent.com/u/100463011/ngActivityIndicator-small.gif)]()
+## [Demo]()
 
-### [Demo]()
+[![](https://dl.dropboxusercontent.com/u/100463011/ngActivityIndicator-small.gif)]()
 
 ## Install
 
@@ -108,8 +108,9 @@ You're able to choose what indicator suites you most within default ones or crea
 
 ##### List of style names:
 
-- ``SimpleLightGrey``
-- ``AnotherStyle``
+- CircledWhite / CircledGrey / CircledDark
+- DottedWhite / DottedGrey / DottedDark
+- SpinnerWhite / SpinnerGrey / SpinnerDark
 
 ## Contribution
 
