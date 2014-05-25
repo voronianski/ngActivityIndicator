@@ -49,13 +49,7 @@
 			background: #f54;
 			color: #fff;
 			font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
-			overflow: hidden;
-		}
-
-		a {
-			color: #fff;
-			border-bottom: 2px solid;
-			text-decoration: none;
+			overflow-x: hidden;
 		}
 
 		h1 {
@@ -70,6 +64,12 @@
 		.info {
 			margin-top: 10px;
 			text-align: center;
+		}
+
+		.info a {
+			color: #fff;
+			border-bottom: 2px solid;
+			text-decoration: none;
 		}
 
 		.main {
@@ -90,14 +90,6 @@
 			font-size: 20px;
 			margin-top: 80px;
 			text-align: center;
-		}
-
-		.box .name:before {
-			content: '“';
-		}
-
-		.box .name:after {
-			content: '”';
 		}
 
 		.box .ai-circled {
@@ -132,6 +124,35 @@
 			clear: both;
 			text-align: center;
 		}
+
+		.socials {
+			width: 350px;
+			margin: 50px auto;
+			text-align: center;
+		}
+
+		.twitter-share-button {
+			width: 90px !important;
+		}
+
+		.github-ribbon, .github-ribbon:hover {
+			display: block;
+			background: #40bfc0;
+			color: #fff;
+			font-size: 14px;
+			padding: 8px 50px;
+			position: absolute;
+			top: 35px;
+			right: -45px;
+			text-decoration: none;
+			text-transform: lowercase;
+			-moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+			z-index: 1;
+		}
 	</style>
 </head>
 <body ng-controller="MainCtrl">
@@ -162,6 +183,21 @@
 		<a href="" class="btn" ng-click="stop()">Stop</a>
 	</div>
 
+	<!-- Social buttons and credits -->
+	<div class="socials">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-via="voronianski" data-lang="en-gb" data-hashtags="ngActivityIndicator">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+		<iframe src="http://ghbtns.com/github-btn.html?user=voronianski&repo=ngActivityIndicator&type=watch&count=true"
+	  allowtransparency="true" frameborder="0" scrolling="0" width="86" height="20"></iframe>
+
+		<iframe src="http://ghbtns.com/github-btn.html?user=voronianski&type=follow"
+	  allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
+	</div>
+
+	<a href="https://github.com/voronianski/ngActivityIndicator" class="github-ribbon">Fork on Github</a>
+
+	<!-- App -->
 	<script src="../bower_components/angular/angular.js"></script>
 	<script src="../ngActivityIndicator.js"></script>
 	<script>
