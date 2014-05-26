@@ -23,12 +23,14 @@ You need to include ``ngActivityIndicator.js`` and  ``ngActivityIndicator.css`` 
 ```javascript
 var app = angular.module('exampleApp', ['ngActivityIndicator']);
 
-app.controller('MainCtrl', ['$activityIndicator', '$timeout', function ($actvityIndicator, $timeout) {
-	$actvityIndicator.startAnimating();
-	$timeout(function () {
-		$actvityIndicator.stopAnimating();
-	}, 3000);
-}]);
+app.controller('MainCtrl', ['$activityIndicator', '$timeout', 
+	function ($actvityIndicator, $timeout) {
+		$actvityIndicator.startAnimating();
+		$timeout(function () {
+			$actvityIndicator.stopAnimating();
+		}, 3000);
+	}
+]);
 ```
 
 You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#directive) to show animation or you are able to create your own preloader in html, style with CSS and simply show/hide it:
