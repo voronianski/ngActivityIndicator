@@ -33,7 +33,7 @@ app.controller('MainCtrl', ['$activityIndicator', '$timeout',
 ]);
 ```
 
-You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#directive) to show animation or you are able to create your own preloader in html, style with CSS and simply show/hide it:
+You can use [ngActivityIndicator directive](https://github.com/voronianski/ngActivityIndicator#directive) to show one of built-in animated views or you are able to create your own preloader in html, style it with CSS and simply show/hide it:
 
 ```html
 <body>
@@ -42,7 +42,7 @@ You can use [ngActivityIndicator directive](https://github.com/voronianski/ngAct
 </body>
 ```
 
-Also this service can be easily used with **[loading](https://github.com/jxnblk/loading)** SVG concept by Brett Jackson. But be aware of limited browser support and user experience issues with perceptual loading time - http://caniuse.com/svg-smil
+Also this service can be easily used with **[loading](https://github.com/jxnblk/loading)** SVG concept by Brett Jackson. But be aware of limited browser SVG support and user experience issues with perceptual loading time - http://caniuse.com/svg-smil
 
 ## API
 
