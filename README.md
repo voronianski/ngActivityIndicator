@@ -76,10 +76,10 @@ Module is shiped with helpful directive. It is called as **ngActivityIndicator**
 When it's added to ``<body>`` tag, it adds relevant preloader into the app, shows and hides ``ng-view`` while animating. It's recommended and the most common use-case, example:
 
 ```html
-<!-- Indicator is injected into the DOM automaticly -->
+<!-- Indicator is injected into the DOM automatically -->
 <body ng-activity-indicator>
 
-	<!-- ngView is shown/hidden automaticly -->
+	<!-- ngView is shown/hidden automatically -->
 	<div ng-view></div>
 </body>
 ```
@@ -88,7 +88,7 @@ If you prefer to manage what to show on preloading mode by yourself, just use it
 
 ```html
 <body>
-	<!-- it is shown/hidden automaticly -->
+	<!-- it is shown/hidden automatically -->
 	<div ng-activity-indicator class="center"></div>
 
 	<!-- show/hide elements based on $rootScope.AILoading property -->
