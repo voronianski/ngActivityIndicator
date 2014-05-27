@@ -15,7 +15,6 @@
 	position: relative;
 	border-width: 5px;
 	border-style: solid;
-	-webkit-border-radius: 100%;
 	border-radius: 100%;
 	-webkit-animation: ai-clockwise .6s linear infinite;
 	-moz-animation: ai-clockwise .6s linear infinite;
@@ -43,17 +42,27 @@
 	height: 0.5em;
 	border-radius: 100%;
 	-webkit-transform-origin: 50%;
+	-moz-transform-origin: 50%;
+	-ms-transform-origin: 50%;
 	transform-origin: 50%;
-	-webkit-animation: ai-rotate .75s infinite linear;
-	animation: rotate .75s infinite linear;
+	-webkit-animation: ai-rotate .75s linear infinite;
+	-moz-animation: ai-rotate .75s linear infinite;
+	-ms-animation: ai-rotate .75s linear infinite;
+	animation: ai-rotate .75s linear infinite;
 }
 
 .ai-dotted .ai-inner2 {
 	-webkit-animation-delay: 0.1875s;
+	-moz-animation-delay: 0.1875s;
+	-ms-animation-delay: 0.1875s;
+	animation-delay: 0.1875s;
 }
 
 .ai-dotted .ai-inner3 {
 	-webkit-animation-delay: 0.375s;
+	-moz-animation-delay: 0.375s;
+	-ms-animation-delay: 0.375s;
+	animation-delay: 0.375s;
 }
 
 @-webkit-keyframes ai-rotate {
@@ -94,12 +103,16 @@
 
 /* Spinner */
 .ai-spinner {
-	position cabsolute;
+	position absolute;
 	width: 100px;
 	height: 100px;
 	-webkit-animation: ai-rotateThis 1s infinite linear;
+	-moz-animation: ai-rotateThis 1s infinite linear;
+	-ms-animation: ai-rotateThis 1s infinite linear;
 	animation: ai-rotateThis 1s infinite linear;
 	-webkit-transform:scale(0.3);
+	-moz-transform:scale(0.3);
+	-ms-transform:scale(0.3);
 	transform:scale(0.3);
 }
 
