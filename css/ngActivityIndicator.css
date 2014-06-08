@@ -103,7 +103,7 @@
 
 /* Spinner */
 .ai-spinner {
-	position absolute;
+	position: absolute;
 	width: 100px;
 	height: 100px;
 	-webkit-animation: ai-rotateThis 1s infinite linear;
