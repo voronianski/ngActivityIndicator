@@ -42,7 +42,9 @@ You can use [ngActivityIndicator directive](https://github.com/voronianski/ngAct
 </body>
 ```
 
-Also this service can be easily used with **[loading](https://github.com/jxnblk/loading)** SVG concept by Brett Jackson. But be aware of limited browser SVG support and user experience issues with perceptual loading time - http://caniuse.com/svg-smil
+Also this service can be easily used with **[loading](https://github.com/jxnblk/loading)** SVG concept by Brett Jackson. But be aware of limited browser SVG support and user experience issues with perceptual loading time - http://caniuse.com/svg-smil.
+
+Or you can use preloader styles from Luke's [https://github.com/lukehaas/css-loaders](https://github.com/lukehaas/css-loaders) as well.
 
 ## API
 
