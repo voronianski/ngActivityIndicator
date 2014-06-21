@@ -19,11 +19,16 @@
 	-webkit-animation: ai-clockwise .6s linear infinite;
 	-moz-animation: ai-clockwise .6s linear infinite;
 	-ms-animation: ai-clockwise .6s linear infinite;
+	-o-animation: ai-clockwise .6s linear infinite;
 	animation: ai-clockwise .6s linear infinite;
 }
 
 @-webkit-keyframes ai-clockwise {
 	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+
+@-o-keyframes ai-clockwise {
+	to { -o-transform: rotate(360deg) translateZ(0); }
 }
 
 @keyframes ai-clockwise {
