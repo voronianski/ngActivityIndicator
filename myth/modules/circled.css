@@ -1,0 +1,14 @@
+/* Circled */
+.ai-circled {
+	height: 32px;
+	width: 32px;
+	position: relative;
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 100%;
+	animation: ai-clockwise .6s linear infinite;
+}
+
+@keyframes ai-clockwise {
+	to { transform: rotate(360deg) translateZ(0); }
+}

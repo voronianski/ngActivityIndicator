@@ -1,0 +1,31 @@
+.ai-indicator,
+.ai-indicator *,
+.ai-indicator *:before,
+.ai-indicator *:after {
+	box-sizing: border-box;
+}
+
+/* Colors */
+.ai-white-spin {
+	border-color: rgba(255,255,255,.5) rgba(255,255,255, .5) #fff #fff;
+}
+
+.ai-white-parent > * {
+	background: #fff;
+}
+
+.ai-grey-spin {
+	border-color: rgba(189, 195, 199, .5) rgba(189, 195, 199, .5) #bdc3c7 #bdc3c7;
+}
+
+.ai-grey-parent > * {
+	background: #bdc3c7;
+}
+
+.ai-dark-spin {
+	border-color: rgba(44, 62, 80, .5) rgba(44, 62, 80, .5) #2c3e50 #2c3e50;
+}
+
+.ai-dark-parent > * {
+	background: #2c3e50;
+}

@@ -1,0 +1,72 @@
+/* Spinner */
+.ai-spinner {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	animation: ai-rotateThis 1s infinite linear;
+	transform:scale(0.3);
+}
+
+.ai-spinner > * {
+	width: 10px;
+	height: 30px;
+	position: absolute;
+	top: 35px;
+	left: 45px;
+	border-radius: 50px;
+}
+
+@keyframes ai-rotateThis {
+	from { transform:scale(0.3) rotate(0deg); }
+	to	 { transform:scale(0.3) rotate(360deg); }
+}
+
+.ai-bar1 {
+	transform: rotate(0deg) translate(0, -40px);
+	opacity:0.1;
+}
+
+.ai-bar2 {
+	transform: rotate(36deg) translate(0, -40px);
+	opacity:0.2;
+}
+
+.ai-bar3 {
+	transform: rotate(72deg) translate(0, -40px);
+	opacity:0.3;
+}
+
+.ai-bar4 {
+	transform: rotate(108deg) translate(0, -40px);
+	opacity:0.4;
+}
+
+.ai-bar5 {
+	transform: rotate(144deg) translate(0, -40px);
+	opacity:0.5;
+}
+
+.ai-bar6 {
+	transform: rotate(180deg) translate(0, -40px);
+	opacity:0.6;
+}
+
+.ai-bar7 {
+	transform: rotate(216deg) translate(0, -40px);
+	opacity:0.7;
+}
+
+.ai-bar8 {
+	transform: rotate(252deg) translate(0, -40px);
+	opacity:0.8;
+}
+
+.ai-bar9 {
+	transform: rotate(288deg) translate(0, -40px);
+	opacity:0.9;
+}
+
+.ai-bar10 {
+	transform: rotate(324deg) translate(0, -40px);
+	opacity:1;
+}

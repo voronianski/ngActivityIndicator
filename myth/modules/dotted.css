@@ -1,0 +1,40 @@
+/* Dotted */
+.ai-dotted {
+	width: 36px;
+}
+
+.ai-dotted .ai-inner1, .ai-dotted .ai-inner2, .ai-dotted .ai-inner3 {
+	display: inline-block;
+	margin: 0.125em;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 100%;
+	transform-origin: 50%;
+	animation: ai-rotate .75s linear infinite;
+}
+
+.ai-dotted .ai-inner2 {
+	animation-delay: 0.1875s;
+}
+
+.ai-dotted .ai-inner3 {
+	animation-delay: 0.375s;
+}
+
+@keyframes ai-rotate {
+	0% {
+		transform: translateY(0%);
+	}
+
+	30% {
+		transform: translateY(-0.25em);
+	}
+
+	50% {
+		transform: translateY(0%);
+	}
+
+	70% {
+		transform: translateY(0.25em);
+	}
+}
