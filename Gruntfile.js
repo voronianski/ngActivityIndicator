@@ -23,6 +23,12 @@ module.exports = function (grunt) {
 			files: ['*.js']
 		},
 
+		myth: {
+			all: {
+				files: { 'css/ngActivityIndicator.css': 'myth/index.css' }
+			}
+		},
+
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> (<%= pkg.homepage %>) */\n'
@@ -38,5 +44,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+	grunt.loadNpmTasks('grunt-myth');
+	grunt.registerTask('default', ['jshint', 'uglify', 'myth', 'cssmin']);
 };
