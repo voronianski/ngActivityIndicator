@@ -27,7 +27,7 @@ app.controller('MainCtrl', ['$activityIndicator', '$timeout',
 	function ($actvityIndicator, $timeout) {
 		$actvityIndicator.startAnimating();
 		$timeout(function () {
-			$actvityIndicator.stopAnimating();
+			$activityIndicator.stopAnimating();
 		}, 3000);
 	}
 ]);
