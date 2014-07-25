@@ -23,7 +23,7 @@ You need to include ``ngActivityIndicator.js`` and  ``ngActivityIndicator.css`` 
 ```javascript
 var app = angular.module('exampleApp', ['ngActivityIndicator']);
 
-app.controller('MainCtrl', ['$activityIndicator', '$timeout', 
+app.controller('MainCtrl', ['$activityIndicator', '$timeout',
 	function ($actvityIndicator, $timeout) {
 		$actvityIndicator.startAnimating();
 		$timeout(function () {
