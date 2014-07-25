@@ -10,17 +10,9 @@
 	var activityIndicatorStyle = 'CircledGrey';
 
 	var templates = {
-		Circled: '\
-			<div ng-show="AILoading" class="ai-circled ai-indicator"></div>',
-		Dotted: '\
-			<div ng-show="AILoading" class="ai-dotted ai-indicator">\
-				<span class="ai-inner1"></span><span class="ai-inner2"></span><span class="ai-inner3"></span>\
-			</div>',
-		Spinner: '\
-			<div ng-show="AILoading" class="ai-spinner ai-indicator">\
-				<div class="ai-bar1"></div><div class="ai-bar2"></div><div class="ai-bar3"></div><div class="ai-bar4"></div><div class="ai-bar5"></div><div class="ai-bar6"></div>\
-				<div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar9"></div><div class="ai-bar10"></div>\
-			</div>'
+		Circled: '<div ng-show="AILoading" class="ai-circled ai-indicator"></div>',
+		Dotted: '<div ng-show="AILoading" class="ai-dotted ai-indicator"><span class="ai-inner1"></span><span class="ai-inner2"></span><span class="ai-inner3"></span></div>',
+		Spinner: '<div ng-show="AILoading" class="ai-spinner ai-indicator"><div class="ai-bar1"></div><div class="ai-bar2"></div><div class="ai-bar3"></div><div class="ai-bar4"></div><div class="ai-bar5"></div><div class="ai-bar6"></div><div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar7"></div><div class="ai-bar8"></div><div class="ai-bar9"></div><div class="ai-bar10"></div></div>'
 	};
 
 	var templater = function (styleName) {
