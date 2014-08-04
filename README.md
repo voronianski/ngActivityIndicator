@@ -18,14 +18,14 @@ bower install ngActivityIndicator
 
 ## Usage
 
-You need to include ``ngActivityIndicator.js`` and  ``ngActivityIndicator.css`` (as minimal setup) to your project and then you can start using ``$actvityIndicator`` service wherever you want - inside your directives, controllers or services. For example in controllers:
+You need to include ``ngActivityIndicator.js`` and  ``ngActivityIndicator.css`` (as minimal setup) to your project and then you can start using ``$activityIndicator`` service wherever you want - inside your directives, controllers or services. For example in controllers:
 
 ```javascript
 var app = angular.module('exampleApp', ['ngActivityIndicator']);
 
 app.controller('MainCtrl', ['$activityIndicator', '$timeout',
-	function ($actvityIndicator, $timeout) {
-		$actvityIndicator.startAnimating();
+	function ($activityIndicator, $timeout) {
+		$activityIndicator.startAnimating();
 		$timeout(function () {
 			$activityIndicator.stopAnimating();
 		}, 3000);
