@@ -106,6 +106,20 @@ You can also override preloader style by adding it's name as directive value:
 <div ng-activity-indicator="CircledDark"></div>
 ```
 
+### Skip `ngShow`
+
+Sometimes it's useful to control indicator show/hide behavior by your own `$scope` (for example if you have multiple loaders inside one view). In this case there is additional attribute for directive:
+
+##### `skip-ng-show="[yes/no]"`
+
+It's easy to use, just add it on the activity indicator directive:
+
+```html
+<div ng-show="myLoadingConditional" ng-activity-indicator skip-ng-show="yes"></div>
+```
+
+This will ends up in skipping `ng-show="AILoading"` directive on ngActivityIndicator element and will add ability to control loader presence by `myLoadingConditional`.
+
 ## Built-in styles
 
 You're able to choose what indicator suites you most within default ones or create your own.
