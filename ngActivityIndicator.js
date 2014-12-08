@@ -4,7 +4,20 @@
  * (c) 2014 MIT License, http://pixelhunter.me
  */
 
-(function (window, angular, undefined) {
+(function (root, factory) {
+    if (typeof module !== 'undefined' && module.exports) {
+        // CommonJS
+        module.exports = factory(root, require('angular'));
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['angular'], function (react, angular) {
+            return (root.ngActivityIndicator = factory(root, angular));
+        });
+    } else {
+        // Global Variables
+        root.ngActivityIndicator = factory(root, root.angular);
+    }
+}(this, function ngActivityIndicator(window, angular) {
     'use strict';
 
     var activityIndicatorStyle = 'CircledGrey';
@@ -33,8 +46,7 @@
         return $template;
     };
 
-    angular.module('ngActivityIndicator', [])
-
+    return angular.module('ngActivityIndicator', [])
     .provider('$activityIndicator', function () {
         this.setActivityIndicatorStyle = function (_activityIndicatorStyle) {
             activityIndicatorStyle = _activityIndicatorStyle || activityIndicatorStyle;
@@ -93,5 +105,4 @@
             }
         };
     });
-
-})(window, window.angular);
+}));
