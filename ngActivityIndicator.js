@@ -7,17 +7,15 @@
 (function (root, factory) {
     if (typeof module !== 'undefined' && module.exports) {
         // CommonJS
-        module.exports = factory(root, require('angular'));
+        module.exports = factory(require('angular'));
     } else if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['angular'], function (angular) {
-            return factory(root, angular);
-        });
+        define(['angular'], factory);
     } else {
         // Global Variables
-        factory(root, root.angular);
+        factory(root.angular);
     }
-}(this, function (window, angular) {
+}(this, function (angular) {
     'use strict';
 
     var activityIndicatorStyle = 'CircledGrey';

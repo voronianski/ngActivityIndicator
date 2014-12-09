@@ -4,7 +4,7 @@
     "ngActivityIndicator.js",
     "css/ngActivityIndicator.css"
   ],
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "https://github.com/voronianski/ngActivityIndicator",
   "description": "Simple Angular.js preloaders provider",
   "keywords": [
